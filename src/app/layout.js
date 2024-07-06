@@ -31,12 +31,6 @@ const localFonts = localFont({
       style: "normal",
     },
     {
-      path: "../../public/fonts/SFProDisplay/SFProDisplayMedium.woff2",
-      weight: "500",
-      style: "normal",
-    },
-
-    {
       path: "../../public/fonts/SFProDisplay/SFProDisplayRegular.woff2",
       weight: "400",
       style: "normal",
@@ -65,7 +59,7 @@ export default function RootLayout({ children }) {
     <html
       lang="en"
       className={`${localFonts.variable}`}>
-      <body className="min-h-screen grid grid-rows-[68px_1fr_auto] md:grid-rows-[62px_1fr_auto] dark:bg-black/75 dark:text-white">
+      <body className="min-h-screen grid grid-rows-[68px_1fr_auto] md:grid-rows-[62px_1fr_auto] dark:bg-black dark:text-white">
         <Header />
         {children}
         <Footer />
