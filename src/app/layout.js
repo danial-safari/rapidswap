@@ -1,5 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
+import { Header } from "./_components/header";
+import { Footer } from "./_components/footer";
 
 const localFonts = localFont({
   src: [
@@ -33,7 +35,7 @@ const localFonts = localFont({
       weight: "500",
       style: "normal",
     },
-    
+
     {
       path: "../../public/fonts/SFProDisplay/SFProDisplayRegular.woff2",
       weight: "400",
@@ -60,8 +62,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${localFonts.variable}`} >
-      <body>{children}</body>
+    <html
+      lang="en"
+      className={`${localFonts.variable}`}>
+      <body className="min-h-screen grid grid-rows-[68px_1fr_auto] md:grid-rows-[62px_1fr_auto] dark:bg-black/75 dark:text-white">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }
